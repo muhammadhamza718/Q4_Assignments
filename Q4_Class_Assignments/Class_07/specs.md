@@ -68,17 +68,21 @@ The standard command for running the FastAPI server is:
 *   **Base URL:** `http://localhost:8000`
 *   **Documentation (Swagger UI/ReDoc):** `http://localhost:8000/docs`
 
-## 5. Assignment Requirements (FastAPI Homework)
+## 5. Assignment Requirements (FastAPI Homework) - UPDATED
 
-The CLI must be able to generate the code for a simple banking application with the following endpoints and logic:
+The CLI must be able to generate the code for a simple banking application with the following endpoints and logic, using **account numbers** as the primary identifier:
 
-1.  **`/authenticate` Endpoint:**
-    *   **Input:** Requires `name` and `pin_number` from the user.
+1.  **`/authenticate` Endpoint (POST):**
+    *   **Input:** Requires `account_number` (string) and `pin` (string).
     *   **Function:** Authenticates the user.
-2.  **`/bank-transfer` Endpoint:**
-    *   **Input:** Requires `receipents_name` and the `amount to transfer`.
+2.  **`/balance/{account_number}` Endpoint (GET):**
+    *   **Input:** Requires `account_number` as a path parameter.
+    *   **Function:** Retrieves and returns the current balance for the specified account.
+3.  **`/bank-transfer` Endpoint (POST):**
+    *   **Input:** Requires `from_account` (string), `to_account` (string), and `amount` (float).
     *   **Function:**
-        *   Deducts the amount from the sender's account.
-        *   Adds the amount to the receiver's account.
-3.  **Post-Transfer Verification:**
-    *   After a bank transfer, the system should be able to re-authenticate with the receiver's name to verify that the transferred amount has been successfully added to their `bank_balance`.
+        *   Checks for sufficient funds in the `from_account`.
+        *   Deducts the `amount` from the sender's account.
+        *   Adds the `amount` to the receiver's account.
+4.  **Post-Transfer Verification:**
+    *   After a bank transfer, the system should allow verification of the transfer by checking the balance of both the sender and receiver accounts using the `/balance` endpoint.
