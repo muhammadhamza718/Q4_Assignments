@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morent - Car Rental</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Boxicons CDN -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__container container">
+            <a href="#" class="header__logo">MORENT</a>
+
+            <div class="header__search">
+                <input type="search" placeholder="Search something here" class="header__search-input">
+                <i class='bx bx-slider-alt header__search-icon'></i>
+            </div>
+
+            <div class="header__user">
+                <i class='bx bx-heart'></i>
+                <i class='bx bx-bell'></i>
+                <i class='bx bx-cog'></i>
+                <img src="images/user-profile.png" alt="User Profile" class="header__user-img">
+            </div>
+        </div>
+    </header>
+
+    <main class="main container">
+        <section class="hero">
+            <div class="hero__card hero__card--primary">
+                <div class="hero__card-content">
+                    <h1 class="hero__card-title">The Best Platform for Car Rental</h1>
+                    <p class="hero__card-description">Ease of doing a car rental safely and reliably. Of course at a low price.</p>
+                    <a href="#" class="hero__card-button">Rental Car</a>
+                </div>
+                <img src="https://placehold.co/400x120/3563e9/ffffff?text=Car+Image" alt="Promo Car" class="hero__card-img">
+            </div>
+            <div class="hero__card hero__card--secondary">
+                <div class="hero__card-content">
+                    <h2 class="hero__card-title">Easy Way to Rent a Car at a Low Price</h2>
+                    <p class="hero__card-description">Providing cheap car rental services and safe and comfortable facilities.</p>
+                    <a href="#" class="hero__card-button">Rental Car</a>
+                </div>
+                <img src="https://placehold.co/400x120/1a202c/ffffff?text=Car+Image" alt="Promo Car" class="hero__card-img">
+            </div>
+        </section>
+
+        <section class="search">
+            <form class="search__form">
+                <div class="search__group">
+                    <div class="search__input-group">
+                        <label for="pickup-location" class="search__label">Pick-Up</label>
+                        <select id="pickup-location" class="search__input">
+                            <option value="">Select your city</option>
+                            <option value="new-york">New York</option>
+                            <option value="los-angeles">Los Angeles</option>
+                        </select>
+                    </div>
+                    <div class="search__input-group">
+                        <label for="pickup-date" class="search__label">Date</label>
+                        <input type="date" id="pickup-date" class="search__input">
+                    </div>
+                    <div class="search__input-group">
+                        <label for="pickup-time" class="search__label">Time</label>
+                        <input type="time" id="pickup-time" class="search__input">
+                    </div>
+                </div>
+
+                <div class="search__swap">
+                    <button type="button" class="search__swap-button">
+                        <i class='bx bx-transfer'></i>
+                    </button>
+                </div>
+
+                <div class="search__group">
+                    <div class="search__input-group">
+                        <label for="dropoff-location" class="search__label">Drop-Off</label>
+                        <select id="dropoff-location" class="search__input">
+                            <option value="">Select your city</option>
+                            <option value="new-york">New York</option>
+                            <option value="los-angeles">Los Angeles</option>
+                        </select>
+                    </div>
+                    <div class="search__input-group">
+                        <label for="dropoff-date" class="search__label">Date</label>
+                        <input type="date" id="dropoff-date" class="search__input">
+                    </div>
+                    <div class="search__input-group">
+                        <label for="dropoff-time" class="search__label">Time</label>
+                        <input type="time" id="dropoff-time" class="search__input">
+                    </div>
+                </div>
+                 <button type="submit" class="search__button">Search</button>
+            </form>
+        </section>
+
+        <section class="car-list">
+            <div class="car-list__header">
+                <h2 class="car-list__title">Popular Car</h2>
+                <a href="#" class="car-list__view-all">View All</a>
+            </div>
+            <div class="car-list__container">
+                <article class="car-card">
+                    <div class="car-card__header">
+                        <div>
+                            <h3 class="car-card__title">Koenigsegg</h3>
+                            <p class="car-card__type">Sport</p>
+                        </div>
+                        <i class='bx bx-heart car-card__like-button'></i>
+                    </div>
+                    <img src="https://placehold.co/240x120/E0E0E0/333333?text=Koenigsegg" alt="Koenigsegg car" class="car-card__img">
+                    <div class="car-card__specs">
+                        <span><i class='bx bxs-gas-pump'></i> 90L</span>
+                        <span><i class='bx bx-git-repo-forked'></i> Manual</span>
+                        <span><i class='bx bx-user'></i> 2 People</span>
+                    </div>
+                    <div class="car-card__footer">
+                        <div class="car-card__price">
+                            <strong>$99.00/</strong> day
+                        </div>
+                        <a href="#" class="car-card__rent-button">Rent Now</a>
+                    </div>
+                </article>
+                <article class="car-card">
+                    <div class="car-card__header">
+                        <div>
+                            <h3 class="car-card__title">Nissan GT-R</h3>
+                            <p class="car-card__type">Sport</p>
+                        </div>
+                        <i class='bx bxs-heart car-card__like-button liked'></i>
+                    </div>
+                    <img src="https://placehold.co/240x120/D1D5DB/333333?text=Nissan+GT-R" alt="Nissan GT-R car" class="car-card__img">
+                    <div class="car-card__specs">
+                        <span><i class='bx bxs-gas-pump'></i> 80L</span>
+                        <span><i class='bx bx-git-repo-forked'></i> Automatic</span>
+                        <span><i class='bx bx-user'></i> 2 People</span>
+                    </div>
+                    <div class="car-card__footer">
+                        <div class="car-card__price">
+                            <strong>$80.00/</strong> day
+                        </div>
+                        <a href="#" class="car-card__rent-button">Rent Now</a>
+                    </div>
+                </article>
+                <article class="car-card hidden">
+                    <div class="car-card__header">
+                        <div>
+                            <h3 class="car-card__title">Rolls-Royce</h3>
+                            <p class="car-card__type">Sedan</p>
+                        </div>
+                        <i class='bx bx-heart car-card__like-button'></i>
+                    </div>
+                    <img src="https://placehold.co/240x120/C2DFFF/333333?text=Rolls-Royce" alt="Rolls-Royce car" class="car-card__img">
+                    <div class="car-card__specs">
+                        <span><i class='bx bxs-gas-pump'></i> 70L</span>
+                        <span><i class='bx bx-git-repo-forked'></i> Manual</span>
+                        <span><i class='bx bx-user'></i> 4 People</span>
+                    </div>
+                    <div class="car-card__footer">
+                        <div class="car-card__price">
+                            <strong>$96.00/</strong> day
+                        </div>
+                        <a href="#" class="car-card__rent-button">Rent Now</a>
+                    </div>
+                </article>
+                <article class="car-card hidden">
+                    <div class="car-card__header">
+                        <div>
+                            <h3 class="car-card__title">Lamborghini</h3>
+                            <p class="car-card__type">Sport</p>
+                        </div>
+                        <i class='bx bx-heart car-card__like-button'></i>
+                    </div>
+                    <img src="https://placehold.co/240x120/FDE68A/333333?text=Lamborghini" alt="Lamborghini car" class="car-card__img">
+                    <div class="car-card__specs">
+                        <span><i class='bx bxs-gas-pump'></i> 90L</span>
+                        <span><i class='bx bx-git-repo-forked'></i> Automatic</span>
+                        <span><i class='bx bx-user'></i> 2 People</span>
+                    </div>
+                    <div class="car-card__footer">
+                        <div class="car-card__price">
+                            <strong>$99.00/</strong> day
+                        </div>
+                        <a href="#" class="car-card__rent-button">Rent Now</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="car-list hidden" id="recommendation-list">
+            <h2 class="car-list__title">Recommendation Car</h2>
+            <div class="car-list__container">
+                <article class="car-card">
+                    <div class="car-card__header">
+                        <div>
+                            <h3 class="car-card__title">All New Rush</h3>
+                            <p class="car-card__type">SUV</p>
+                        </div>
+                        <i class='bx bx-heart car-card__like-button'></i>
+                    </div>
+                    <img src="https://placehold.co/240x120/FECACA/333333?text=All+New+Rush" alt="All New Rush car" class="car-card__img">
+                    <div class="car-card__specs">
+                        <span><i class='bx bxs-gas-pump'></i> 70L</span>
+                        <span><i class='bx bx-git-repo-forked'></i> Manual</span>
+                        <span><i class='bx bx-user'></i> 6 People</span>
+                    </div>
+                    <div class="car-card__footer">
+                        <div class="car-card__price">
+                            <strong>$72.00/</strong> day
+                        </div>
+                        <a href="#" class="car-card__rent-button">Rent Now</a>
+                    </div>
+                </article>
+                <article class="car-card">
+                    <div class="car-card__header">
+                        <div>
+                            <h3 class="car-card__title">CR - V</h3>
+                            <p class="car-card__type">SUV</p>
+                        </div>
+                        <i class='bx bxs-heart car-card__like-button liked'></i>
+                    </div>
+                    <img src="https://placehold.co/240x120/A5B4FC/333333?text=CR+-+V" alt="CR - V car" class="car-card__img">
+                    <div class="car-card__specs">
+                        <span><i class='bx bxs-gas-pump'></i> 80L</span>
+                        <span><i class='bx bx-git-repo-forked'></i> Automatic</span>
+                        <span><i class='bx bx-user'></i> 6 People</span>
+                    </div>
+                    <div class="car-card__footer">
+                        <div class="car-card__price">
+                            <strong>$80.00/</strong> day
+                        </div>
+                        <a href="#" class="car-card__rent-button">Rent Now</a>
+                    </div>
+                </article>
+                <article class="car-card">
+                    <div class="car-card__header">
+                        <div>
+                            <h3 class="car-card__title">All New Terios</h3>
+                            <p class="car-card__type">SUV</p>
+                        </div>
+                        <i class='bx bx-heart car-card__like-button'></i>
+                    </div>
+                    <img src="https://placehold.co/240x120/BEF264/333333?text=All+New+Terios" alt="All New Terios car" class="car-card__img">
+                    <div class="car-card__specs">
+                        <span><i class='bx bxs-gas-pump'></i> 90L</span>
+                        <span><i class='bx bx-git-repo-forked'></i> Manual</span>
+                        <span><i class='bx bx-user'></i> 6 People</span>
+                    </div>
+                    <div class="car-card__footer">
+                        <div class="car-card__price">
+                            <strong>$74.00/</strong> day
+                        </div>
+                        <a href="#" class="car-card__rent-button">Rent Now</a>
+                    </div>
+                </article>
+                <article class="car-card">
+                    <div class="car-card__header">
+                        <div>
+                            <h3 class="car-card__title">MG ZX Exclusice</h3>
+                            <p class="car-card__type">Hatchback</p>
+                        </div>
+                        <i class='bx bxs-heart car-card__like-button'></i>
+                    </div>
+                    <img src="https://placehold.co/240x120/C4B5FD/333333?text=MG+ZX" alt="MG ZX Exclusice car" class="car-card__img">
+                    <div class="car-card__specs">
+                        <span><i class='bx bxs-gas-pump'></i> 70L</span>
+                        <span><i class='bx bx-git-repo-forked'></i> Automatic</span>
+                        <span><i class='bx bx-user'></i> 4 People</span>
+                    </div>
+                    <div class="car-card__footer">
+                        <div class="car-card__price">
+                            <strong>$76.00/</strong> day
+                        </div>
+                        <a href="#" class="car-card__rent-button">Rent Now</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <div class="car-list__show-more">
+            <button class="car-list__show-more-button">Show more car</button>
+            <span class="car-list__total">120 Car</span>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__primary">
+                <a href="#" class="footer__logo">MORENT</a>
+                <p class="footer__description">Our vision is to provide convenience and help increase your sales business.</p>
+            </div>
+            <div class="footer__links">
+                <div class="footer__links-group">
+                    <h3 class="footer__links-title">About</h3>
+                    <ul>
+                        <li><a href="#">How it works</a></li>
+                        <li><a href="#">Featured</a></li>
+                        <li><a href="#">Partnership</a></li>
+                        <li><a href="#">Bussiness Relation</a></li>
+                    </ul>
+                </div>
+                <div class="footer__links-group">
+                    <h3 class="footer__links-title">Community</h3>
+                    <ul>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Podcast</a></li>
+                        <li><a href="#">Invite a friend</a></li>
+                    </ul>
+                </div>
+                <div class="footer__links-group">
+                    <h3 class="footer__links-title">Socials</h3>
+                    <ul>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__secondary">
+            <div class="footer__secondary-container container">
+                <p>&copy;2022 MORENT. All rights reserved</p>
+                <div class="footer__legal">
+                    <a href="#">Privacy & Policy</a>
+                    <a href="#">Terms & Condition</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
